@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-- [https://book-to-read.herokuapp.com/] (Live Version)
+- [Live Version](https://book-to-read.herokuapp.com/])
 
 ## Available Scripts
 
