@@ -1,0 +1,124 @@
+/* BookNewModal COMPONENT */
+
+.newbook__checkbox {
+  display: none;
+}
+
+.newbook__button {
+  background-color: rgb(245,25,255);
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.3);
+  text-align: center;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1250px) {
+  .newbook__button {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+
+.newbook__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(rgb(75,25,255), pink);
+  z-index: 1000;
+  transition: -webkit-transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@media only screen and (max-width: 1250px) {
+  .newbook__background {
+    top: 4.5rem;
+    right: 4.5rem;
+  }
+}
+
+.newbook__form-container {
+  position: absolute;
+  top: 12rem;
+  left: -50rem;
+  z-index: 1500;
+  width: 0;
+  opacity: 0;
+  transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@media only screen and (max-width: 1250px) {
+  .newbook__form-container {
+    top: 8rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .newbook__form-container {
+    top: 6rem;
+  }
+}
+
+/* FUNCTIONALITY */
+
+.newbook__checkbox:checked ~ .newbook__background {
+  -webkit-transform: scale(99);
+          transform: scale(99);
+}
+
+.newbook__checkbox:checked ~ .newbook__form-container {
+  opacity: 1;
+  width: 100%;
+  left: 0rem;
+}
+
+/* ICON */
+
+.newbook__icon {
+  position: relative;
+  margin-top: 3.5rem;
+}
+
+.newbook__icon,
+.newbook__icon::before {
+  width: 3rem;
+  height: 3px;
+  background-color: white;
+  display: inline-block;
+  transition: all .2s;
+}
+
+.newbook__icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.newbook__icon::before {
+  top: -.2rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.newbook__button:hover .newbook__icon::before,
+.newbook__button:hover .newbook__icon {
+  width: 3.5rem;
+}
+
+.newbook__checkbox:checked + .newbook__button .newbook__icon::before {
+  top: 0;
+}
+
+.newbook__checkbox:checked + .newbook__button .newbook__icon {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}

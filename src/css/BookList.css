@@ -1,0 +1,59 @@
+/* BookList COMPONENT */
+
+.book-list__book-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, .5% 50%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, .5% 50%);
+}
+
+.book-list__book-item {
+  flex: .6;
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: rgba(75,25,255,.8);
+  color: white;
+}
+
+.book-list__book-item--title {
+  flex: 1.5;
+}
+
+.book-list__book-item--author {
+  flex: 1.5;
+}
+
+.book-list__btn {
+  background-color: rgba(75,25,255,.5);
+  text-decoration: none;
+  border: 0;
+  color: white;
+  margin-left: .5rem;
+  flex: .8;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.book-list__btn:focus {
+  outline: none;
+}
+
+.book-list__btn:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  box-shadow: 0 .3rem 1rem rgba(0,0,0,.2);
+}
+
+.book-list__btn:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  box-shadow: 0 .1rem .7rem rgba(0,0,0,.2);
+}
+
+.book-list__btn--delete {
+  flex: .5;
+  margin-right: .2rem;
+  background-color: rgba(230,50,50,.8);
+}
